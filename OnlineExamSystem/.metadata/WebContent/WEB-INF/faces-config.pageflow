@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16017299348470" configfile="/OnlineExamSystem/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Login/index.xhtml" x="254" y="62" id="pf16017300691161" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf16017311132554 pf16021468545590 pf16021468545601" path="/Login/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="StuHomepage/welcome.xhtml" x="60" y="348" id="pf16017311132555" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16017311132554" path="/StuHomepage/welcome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="TeaHomepage/welcome.xhtml" x="383" y="358" id="pf16021468545602" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf16021468545590" path="/TeaHomepage/welcome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="AdminHomepage/welcome.xhtml" x="492" y="228" id="pf16021468545603" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf16021468545601" path="/AdminHomepage/welcome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Login/forgetPasswd.xhtml" x="911" y="109" id="pf16021563376144" outlinks="pf16021563376145" path="/Login/forgetPasswd.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Login/resetpasswd.xhtml" x="972" y="434" id="pf16021563376146" inlinks="pf16021563376145" path="/Login/resetpasswd.xhtml"/>
+  <links id="pf16017311132554" target="pf16017311132555" source="pf16017300691161" outcome="success2"/>
+  <links id="pf16021468545590" target="pf16021468545602" source="pf16017300691161" outcome="success1"/>
+  <links id="pf16021468545601" target="pf16021468545603" source="pf16017300691161" outcome="success0"/>
+  <links id="pf16021563376145" target="pf16021563376146" source="pf16021563376144" outcome="success"/>
+</pageflow:Pageflow>

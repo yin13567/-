@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>问题的列表</title>
+</head>
+<body>
+
+<p>考试题目如下，点击进入答题</p>
+	
+	<c:forEach items="#{quelistBean.ids}" var="its" varStatus="status">
+		<li>					
+			<p>#{its}</p>
+			<h:form>
+			<h:commandButton value="#{quelistBean.contents.get(status.index)}" action="examing" actionListener="#{examPaperCtrl.setAll}">
+				<f:attribute name="quesid" value="#{its}"/>
+			</h:commandButton>
+			</h:form>
+		</li>
+		
+	</c:forEach>
+	
+</body>
+</html>

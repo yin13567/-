@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>考试管理</title>
+</head>
+<body>
+	<ol>
+		<li>
+			<h:form>
+			<h:commandButton value="一键出卷" action="createpaper" actionListener="#{courseteaCtrl.setAllInfo}">
+			</h:commandButton>
+			</h:form>				
+		</li>
+		<li>
+		<h:form>
+			<h:commandButton value="查看试卷" action="paperinfo" actionListener="#{allPaperCtrl.setAllInfo}">
+			</h:commandButton>
+			</h:form>				
+		</li>
+		<li>
+			<h:form>
+			<h:commandButton value="批改" action="judgepaper" actionListener="#{paperteaCtrl.setAllInfo}">
+			</h:commandButton>
+			</h:form>				
+		</li>
+		<li>
+			<h:form>
+			<h:commandButton value="排名" action="ranking" actionListener="#{paperteaCtrl.setAllInfo}">
+			</h:commandButton>
+			</h:form>				
+		</li>
+	</ol>
+</body>
+</html>

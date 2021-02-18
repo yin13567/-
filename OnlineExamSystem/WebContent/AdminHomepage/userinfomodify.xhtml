@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>用户信息修改</title>
+</head>
+<body>
+	<h:form>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="用户名"></h:outputLabel>
+			<h:outputLabel value = "#{tmpUserInfoBean.userid}"></h:outputLabel>
+			<h:message  for="userid"></h:message>
+
+			<h:outputLabel value="请输入密码"></h:outputLabel>
+			<h:inputText id = "pwd" value = "#{tmpUserInfoBean.userpasswd}" required="true"
+						 label = "#{msgs.password}" >
+			</h:inputText>
+			<h:message  for="pwd"></h:message>
+			
+			<h:outputLabel value="请输入年龄"></h:outputLabel>
+			<h:inputText id = "age" value = "#{tmpUserInfoBean.age}" required="true"
+						 label = "#{msgs.age}" >
+			</h:inputText>
+			<h:message  for="age"></h:message>
+			
+			
+			<h:outputLabel value="请输入性别"></h:outputLabel>
+			<h:inputText id = "gender" value = "#{tmpUserInfoBean.gender}" required="true"
+						 label = "#{msgs.gender}" >
+			</h:inputText>
+			<h:message  for="gender"></h:message>
+			
+			<h:outputLabel value="请输入电话"></h:outputLabel>
+			<h:inputText id = "phone" value = "#{tmpUserInfoBean.phone}" required="true"
+						 label = "#{msgs.phone}" >
+			</h:inputText>
+			<h:message  for="phone"></h:message>
+			
+			
+		<h:commandButton id = "changeBtn" action="homepage" actionListener="#{userInfoLoginCtrl.changeTmpUserInfo}" value="保存" >
+		</h:commandButton>
+		<h:message  for="changeBtn" style="color:Red"></h:message>					
+		
+		</h:panelGrid>
+		
+	</h:form>
+</body>
+</html>

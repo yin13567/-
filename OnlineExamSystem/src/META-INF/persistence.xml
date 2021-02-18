@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="OnlineExamSystem">
+		<jta-data-source>java:jboss/datasources/MySqlXADS</jta-data-source>
+		<class>com.fuhao55170725.examsys.jpa.entity.Coursetable</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.Userinfo</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.Noticetable</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.Personalquestionbank</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.QuestionPersonal</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.Testpaper</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.Stuan</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.PaperStu</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.CourseTea</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.Question</class>
+		<class>com.fuhao55170725.examsys.jpa.entity.QuestionsPaper</class>
+	</persistence-unit>
+</persistence>

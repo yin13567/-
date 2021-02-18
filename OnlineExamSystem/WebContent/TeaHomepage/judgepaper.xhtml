@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>批改试卷</title>
+</head>
+<body>
+<p>请点击选择您将要批改的一个试卷</p>
+	<ol><h:form>
+		<c:forEach items="#{paperteaBean.paperNames}" var="its" varStatus="status">
+			<li>					
+				<h:commandButton value="#{its}" action="paperlist" actionListener="#{paperlistCtrl.setAll}">
+					<f:attribute name="paperid" value="#{paperteaBean.paperid.get(status.index)}"/>
+				</h:commandButton>
+			</li>
+		</c:forEach>
+		</h:form>
+	</ol>
+</body>
+</html>

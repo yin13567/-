@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	<navigation-rule>
+		<display-name>Login/index.xhtml</display-name>
+		<from-view-id>/Login/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success2</from-outcome>
+			<to-view-id>/StuHomepage/welcome.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Login/index.xhtml</display-name>
+		<from-view-id>/Login/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success1</from-outcome>
+			<to-view-id>/TeaHomepage/welcome.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Login/index.xhtml</display-name>
+		<from-view-id>/Login/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success0</from-outcome>
+			<to-view-id>/AdminHomepage/welcome.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Login/forgetPasswd.xhtml</display-name>
+		<from-view-id>/Login/forgetPasswd.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/Login/resetpasswd.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>个人信息</title>
+<style>
+#menu{
+	width:400px;
+	height:200px;
+	margin: auto; 
+	position: absolute; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+	font-size: 20px;
+}
+
+
+body
+{
+	line-height: 1.6em;
+}
+ 
+#hor-minimalist-a
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 45px;
+	width: 480px;
+	border-collapse: collapse;
+	text-align: left;
+}
+#hor-minimalist-a th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 10px 8px;
+	border-bottom: 2px solid #6678b1;
+}
+#hor-minimalist-a td
+{
+	color: #669;
+	padding: 9px 8px 0px 8px;
+}
+#hor-minimalist-a tbody tr:hover td
+{
+	color: #009;
+}
+
+</style>
+</head>
+<body>
+	用户信息界面：
+	<div id="content">
+		<table id="hor-minimalist-a" summary="Employee Pay Sheet">
+    <thead>
+    	<tr>
+        	<th scope="col">用户名</th>
+            <th scope="col">密码</th>
+            <th scope="col">年龄</th>
+            <th scope="col">性别</th>
+            <th scope="col">电话</th>
+            <th scope="col">角色</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+        	<td>#{userInfoBean.userid}</td>
+            <td>#{userInfoBean.userpasswd}</td>
+            <td>#{userInfoBean.age}</td>
+            <td>         
+			<h:outputText value="男" rendered="#{userInfoBean.gender==1}" />
+			<h:outputText value="女" rendered="#{userInfoBean.gender==0}" />
+			</td>
+            <td>#{userInfoBean.phone}</td>
+            <td>
+            <h:outputText value="教师" rendered="#{userInfoBean.role==1}" />
+			<h:outputText value="管理员" rendered="#{userInfoBean.role==0}" />
+            <h:outputText value="学生" rendered="#{userInfoBean.role==2}" />
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+		<a href="modifyinfo.xhtml">修改</a>
+	</div>
+</body>
+</html>
